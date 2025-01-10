@@ -42,6 +42,8 @@ See directory structure on the left
 
 - Toggle view of Neotree: \<Space> + e
 - Create new file/directory: a
+- Go to left window (file tree): \<Space\> + w + h
+- Go to right window (code): \<Space\> + w + l
 
 ## treesitter.lua
 
