@@ -16,3 +16,6 @@ alias dl="$HOME/Downloads"
 alias do="$HOME/Documents"
 
 . "$HOME/.local/bin/env"
+eval "$(~/.local/bin/mise activate)"
+
+export MANPAGER='nvim +Man!'
