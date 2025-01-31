@@ -14,6 +14,7 @@ fi
 # Aliases
 alias dl="$HOME/Downloads"
 alias do="$HOME/Documents"
+alias pd="$HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
 
 . "$HOME/.local/bin/env"
 eval "$(~/.local/bin/mise activate)"
