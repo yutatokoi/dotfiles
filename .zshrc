@@ -1,9 +1,3 @@
-# OMZ
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="agnoster"
-HIST_STAMPS="yyyy-mm-dd"
-source $ZSH/oh-my-zsh.sh
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
@@ -20,3 +14,5 @@ alias pd="$HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
 eval "$(~/.local/bin/mise activate)"
 
 export MANPAGER='nvim +Man!'
+
+eval "$(starship init zsh)"
