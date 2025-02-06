@@ -18,3 +18,10 @@ eval "$(~/.local/bin/mise activate)"
 export MANPAGER='nvim +Man!'
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
