@@ -16,3 +16,5 @@ alias pd="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
 eval "$(~/.local/bin/mise activate)"
 
 export MANPAGER='nvim +Man!'
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
