@@ -11,7 +11,7 @@
 
 ## Shells
 
-Zsh customisation can be done, but it's cumbersome and I would prefer not to worry about it. By default, use Fish as the shell.
+Zsh customisation can be done, but it's cumbersome and I would prefer not to worry about it. By default, use Fish as the shell. However, some commands may not work with Fish, such as `nix-shell`.
 
 ### Switching between shells on macOS
 
