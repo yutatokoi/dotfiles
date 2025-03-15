@@ -35,3 +35,23 @@ require('lazy').setup({
     require 'plugins.indent-blanklines',
     require 'plugins.misc'
 })
+
+-- Function to set indent size based on file extension
+_G.set_indent_size = function()
+  local filetype = vim.bo.filetype
+  if filetype == 'yaml' or filetype == 'yml' or filetype == 'nix' then
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+  else
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end
+end
+
+-- Auto command to call set_indent_size function on file read or buffer enter
+vim.api.nvim_exec([[
+  augroup IndentSize
+    autocmd!
+    autocmd BufRead,BufNewFile * lua _G.set_indent_size()
+  augroup END
+]], false)
