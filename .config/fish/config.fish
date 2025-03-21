@@ -19,3 +19,5 @@ alias do="cd ~/Documents"
 alias pd="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
 
 starship init fish | source
+
+set -Ux PATH $HOME/.nix-profile/bin /run/current-system/sw/bin /nix/var/nix/profiles/default/bin $PATH

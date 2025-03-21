@@ -1,5 +1,5 @@
 eval "$(starship init zsh)"
-#
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
@@ -25,3 +25,5 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
+
+export PATH=$HOME/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$PATH
