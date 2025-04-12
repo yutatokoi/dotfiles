@@ -13,8 +13,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.neovim
-          pkgs.trivy
+        [ pkgs.certbot
           pkgs.docker
           pkgs.fastfetch
           pkgs.ffmpeg
@@ -22,11 +21,13 @@
           pkgs.gh
           pkgs.gnupg
           pkgs.htop
+          pkgs.neovim
           pkgs.newsboat
           pkgs.python313
           pkgs.ripgrep
           pkgs.starship
           pkgs.texliveFull
+          pkgs.trivy
           pkgs.wget
           pkgs.yt-dlp
         ];
@@ -39,8 +40,8 @@
       programs.fish.enable = true;
 
       # Set fish as the default shell
-      users.users.yutatokoi.uid = 501;
       users.knownUsers = [ "yutatokoi" ];
+      users.users.yutatokoi.uid = 501;
       users.users.yutatokoi.shell = pkgs.fish;
 
       # Configure macOS settings
@@ -97,7 +98,6 @@
         trackpad.FirstClickThreshold = 0;
         trackpad.SecondClickThreshold = 0;
         trackpad.TrackpadThreeFingerTapGesture = 0;
-        universalaccess.closeViewScrollWheelToggle = true;
       };
       system = {
         keyboard.enableKeyMapping = true;
