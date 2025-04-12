@@ -19,6 +19,18 @@
 
 Zsh customisation can be done, but it's cumbersome and I would prefer not to worry about it. By default, use Fish as the shell. However, some commands may not work with Fish, such as `nix-shell`.
 
+If you are having trouble converting from `zsh` to `fish`, one way to resolve may be:
+```
+# Find where fish is installed to
+> which fish
+/run/current-system/sw/bin/fish
+
+# If `cat /etc/shells` doesn't show that directory above, then add it:
+> sudo vim /etc/shells
+
+# Restart terminal and do `chsh` to change shells.
+```
+
 ### Switching between shells on macOS
 
 <https://www.cyberciti.biz/faq/change-default-shell-to-bash-on-macos-catalina/>
