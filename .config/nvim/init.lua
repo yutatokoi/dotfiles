@@ -37,21 +37,31 @@ require('lazy').setup({
 })
 
 -- Function to set indent size based on file extension
+local two_space_filetypes = {
+  astro = true,
+  javascript = true,
+  json = true,
+  lua = true,
+  nix = true,
+  terraform = true,
+  typescript = true,
+  typescriptreact = true,
+  yaml = true,
+  yml = true,
+}
+
 _G.set_indent_size = function()
   local filetype = vim.bo.filetype
-  if filetype == 'yaml' or filetype == 'yml' or filetype == 'nix' then
-    vim.bo.shiftwidth = 2
-    vim.bo.tabstop = 2
+  if two_space_filetypes[filetype] then
+    vim.cmd("setlocal shiftwidth=2 tabstop=2 expandtab")
   else
-    vim.bo.shiftwidth = 4
-    vim.bo.tabstop = 4
+    vim.cmd("setlocal shiftwidth=4 tabstop=4 expandtab")
   end
 end
 
--- Auto command to call set_indent_size function on file read or buffer enter
-vim.api.nvim_exec([[
-  augroup IndentSize
-    autocmd!
-    autocmd BufRead,BufNewFile * lua _G.set_indent_size()
-  augroup END
-]], false)
+vim.api.nvim_create_augroup("IndentSize", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "IndentSize",
+  pattern = "*",
+  callback = _G.set_indent_size,
+})
