@@ -16,5 +16,10 @@
   "markdown.preview.fontSize": 16,
   "makefile.configureOnOpen": false,
   "explorer.confirmDelete": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+
+  "[terraform]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+  }
 }
