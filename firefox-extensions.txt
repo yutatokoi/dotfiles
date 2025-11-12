@@ -1,0 +1,1 @@
+ublock, minimal theme for twitter, unhook, proton pass
