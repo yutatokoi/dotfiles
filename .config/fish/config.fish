@@ -17,5 +17,6 @@ set -x MANPAGER 'nvim +Man!'
 alias dl="cd ~/Downloads"
 alias do="cd ~/Documents"
 alias pd="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
+alias od="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder/obsidian"
 
 starship init fish | source
