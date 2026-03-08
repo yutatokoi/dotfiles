@@ -13,10 +13,10 @@ end
 # Navigate man pages with neovim
 set -x MANPAGER 'nvim +Man!'
 
-# Aliases
-alias dl="cd ~/Downloads"
-alias do="cd ~/Documents"
-alias pd="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder"
-alias od="cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder/obsidian"
+# Abbreviations
+abbr --add dl cd ~/Downloads
+abbr --add do cd ~/Documents
+abbr --add pd cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder
+abbr --add od cd $HOME/Library/CloudStorage/ProtonDrive-yutatokoi@proton.me-folder/obsidian
 
 starship init fish | source
